@@ -1,4 +1,4 @@
-FROM node:8.9.4-alpine
+FROM node:8.12.0-alpine
 
 RUN apk add --no-cache gettext imagemagick librsvg ttf-dejavu git
 ENV FALLBACK_FONT_PATH /usr/share/fonts/ttf-dejavu/DejaVuSans.ttf
@@ -10,7 +10,7 @@ WORKDIR /usr/src/app
 ARG NODE_ENV
 ENV NODE_ENV $NODE_ENV
 COPY package.json /usr/src/app/
-COPY secret.tpl.json /usr/src/app/private/secret.json
+COPY secret.empty.json /usr/src/app/private/secret.json
 RUN npm install
 COPY . /usr/src/app
 RUN npm run build
