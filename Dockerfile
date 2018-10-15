@@ -1,4 +1,4 @@
-FROM node:8.9.4-alpine
+FROM node:8.12.0-alpine
 
 RUN apk add --no-cache gettext imagemagick librsvg ttf-dejavu git
 ENV FALLBACK_FONT_PATH /usr/share/fonts/ttf-dejavu/DejaVuSans.ttf
