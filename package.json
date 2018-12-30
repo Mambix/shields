@@ -33,7 +33,7 @@
     "glob": "^7.1.1",
     "gm": "^1.23.0",
     "is-css-color": "^1.0.0",
-    "joi": "13.6.0",
+    "joi": "13.7.0",
     "js-yaml": "^3.11.0",
     "jsonpath": "~1.0.0",
     "lodash.countby": "^4.6.0",
@@ -50,7 +50,7 @@
     "raven": "^2.6.4",
     "redis": "~2.8.0",
     "request": "~2.88.0",
-    "semver": "~5.5.0",
+    "semver": "~5.6.0",
     "simple-icons": "^1.7.1",
     "svgo": "~1.1.1",
     "xml2js": "~0.4.16",
@@ -92,7 +92,8 @@
     "start:server": "HANDLE_INTERNAL_ERRORS=false RATE_LIMIT=false node server 8080 ::",
     "now-start": "node server",
     "prestart": "npm run depcheck && npm run examples && npm run features",
-    "start": "concurrently --names server,frontend \"ALLOWED_ORIGIN=http://localhost:3000 npm run start:server\" \"BASE_URL=http://[::]:8080 next dev\""
+    "start": "concurrently --names server,frontend \"ALLOWED_ORIGIN=http://localhost:3000 npm run start:server\" \"BASE_URL=http://[::]:8080 next dev\"",
+    "refactoring-report": "node lib/refactoring-cli.js"
   },
   "bin": {
     "badge": "lib/badge-cli.js"
@@ -111,7 +112,7 @@
   "devDependencies": {
     "@mapbox/react-click-to-select": "^2.2.0",
     "almost-equal": "^1.1.0",
-    "babel-eslint": "^9.0.0",
+    "babel-eslint": "^10.0.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "caller": "^1.0.1",
@@ -123,7 +124,7 @@
     "child-process-promise": "^2.2.1",
     "classnames": "^2.2.5",
     "concurrently": "^4.0.1",
-    "danger": "^3.7.13",
+    "danger": "^4.0.1",
     "danger-plugin-no-test-shortcuts": "^2.0.0",
     "dejavu-fonts-ttf": "^2.37.3",
     "eol": "^0.9.1",
@@ -172,7 +173,7 @@
     "semver-regex": "^2.0.0",
     "sinon": "^6.0.0",
     "sinon-chai": "^3.0.0",
-    "snap-shot-it": "^5.0.1",
+    "snap-shot-it": "^6.1.8",
     "tmp": "0.0.33",
     "url": "^0.11.0",
     "wait-promise": "^0.4.1"
